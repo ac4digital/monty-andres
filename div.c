@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * div - divs the top two elements of the stack.
+ * _div - divs the top two elements of the stack.
  * @stack: head (stack) to the stack;
  * @line_number: line number where opcode is located
  */
@@ -18,11 +18,11 @@ void _div(stack_t **stack, unsigned int line_number)
 			line_number);
 		exit(EXIT_FAILURE);
 	}
-    
+
 	n = (*stack)->n;
 	pop(stack, line_number);
-	
-    if (n == 0)
+
+	if (n == 0)
 	{
 		fprintf(stderr,
 			"L%u: division by zero\n",
